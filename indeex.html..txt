@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Mishra - Strategic Analytics Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: #0B1C3D;
+            color: #FFFFFF;
+        }
+        .font-display {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .glass-card {
+            background: rgba(23, 53, 118, 0.3);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(37, 162, 224, 0.2);
+            border-radius: 1rem;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .kpi-value {
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 900;
+            color: #F2C43D;
+        }
+        .section-title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #25A2E0;
+        }
+        .flow-step {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        .flow-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2rem;
+            height: 2px;
+            background-color: #25A2E0;
+        }
+        .flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 100%;
+            width: 2px;
+            background-color: #25A2E0;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- 
+    Narrative Plan:
+    1.  Hero Section: Position Om as a Strategic Analytics Leader for Pharma & Agri-business.
+    2.  Case Study 1 (Oncosys): Focus on optimizing pharma sales and supply chain.
+    3.  Case Study 2 (Valency Agro): Focus on driving revenue in the dry fruits market.
+    4.  Core Competencies: Showcase a blend of technical and leadership skills.
+    5.  Contact/Footer: Provide clickable contact icons.
+
+    Visualization Choices:
+    -   Oncosys Sales Trends -> Goal: Change -> Chosen Visualization: Line Chart -> Justification: Best for showing performance over time. Implemented with Chart.js. NO SVG.
+    -   Oncosys Stock Optimization -> Goal: Compare -> Chosen Visualization: Stacked Bar Chart -> Justification: Perfect for showing a 'before and after' composition of stock vs. supply gaps. Implemented with Chart.js. NO SVG.
+    -   Oncosys Strategy -> Goal: Organize -> Chosen Visualization: HTML/CSS Flow Diagram -> Justification: Clearly illustrates a process flow without images. Implemented with HTML/CSS. NO SVG, NO MERMAID JS.
+    -   Valency Market Trends -> Goal: Compare -> Chosen Visualization: Radar Chart -> Justification: Excellent for comparing multiple, distinct market drivers. Implemented with Chart.js. NO SVG.
+    -   Valency Regional Sales -> Goal: Compare -> Chosen Visualization: Donut Chart -> Justification: Shows how different regions contribute to the whole. Implemented with Chart.js. NO SVG.
+
+    Color Palette: Brilliant Blues
+    -   Background: #0B1C3D
+    -   Card/Accent Background: rgba(23, 53, 118, 0.3)
+    -   Primary Accent: #25A2E0
+    -   Secondary Accent: #FFFFFF
+    -   Callout Accent: #F2C43D
+
+    Confirmation: NEITHER Mermaid JS NOR SVG were used in this output.
+-->
+    <div class="container mx-auto px-4 py-8 md:px-8">
+
+        <header class="text-center min-h-screen flex flex-col justify-center items-center" data-aos="fade-in" data-aos-duration="1500">
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white tracking-wider">OM MISHRA</h1>
+            <p class="font-display text-2xl md:text-3xl text-blue-300 mt-4">Strategic Analytics Leader</p>
+            <p class="text-lg md:text-xl text-gray-200 mt-6 max-w-3xl">
+                Driving growth in the <span class="text-yellow-400 font-semibold">Pharmaceutical</span> and <span class="text-yellow-400 font-semibold">Agri-business</span> sectors through data-driven strategy and leadership.
+            </p>
+        </header>
+
+        <main>
+            <section id="oncosys" class="my-24 py-16">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <p class="font-display text-lg text-blue-400">CASE STUDY 01</p>
+                    <h2 class="font-display section-title">Oncosys Formulation</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-300">Optimizing pharmaceutical sales and supply chain logistics through targeted data analysis and stakeholder collaboration.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div data-aos="fade-right">
+                        <h3 class="font-display text-3xl text-yellow-400 mb-4">Sales & Prescription Trend Analysis</h3>
+                        <p class="text-gray-300 mb-6">By analyzing historical sales and prescription data, we identified key growth drivers and seasonal patterns. This line chart illustrates the successful uplift in sales post-implementation of a data-informed marketing strategy in Q4, reversing a previous plateau.</p>
+                        <div class="chart-container">
+                            <canvas id="salesTrendChart"></canvas>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="font-display text-3xl text-yellow-400 mb-4">Supply Chain Optimization</h3>
+                        <p class="text-gray-300 mb-6">A major challenge was preventing supply gaps. This chart shows the 'before' and 'after' state of our inventory management. Through predictive analysis, we reduced supply gaps by over 60%, ensuring consistent product availability for medical representatives and stockists.</p>
+                        <div class="chart-container">
+                            <canvas id="stockChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 mt-12" data-aos="zoom-in-up">
+                    <h3 class="font-display text-3xl text-center text-yellow-400 mb-8">Data-Driven Leadership in Action</h3>
+                    <div class="max-w-2xl mx-auto">
+                        <div class="flow-step">
+                            <h4 class="font-semibold text-xl text-white">1. Data Aggregation & Analysis</h4>
+                            <p class="text-gray-300">Conducted market research and competitor analysis to track sales trends and prescription patterns.</p>
+                        </div>
+                        <div class="flow-step mt-6">
+                            <h4 class="font-semibold text-xl text-white">2. Cross-Functional Collaboration</h4>
+                            <p class="text-gray-300">Partnered with sales teams, medical reps, and stockists to align on data-driven insights and forecasts.</p>
+                        </div>
+                        <div class="flow-step mt-6">
+                            <h4 class="font-semibold text-xl text-white">3. Strategic Campaign Implementation</h4>
+                            <p class="text-gray-300">Coordinated targeted campaigns and promotional activities based on real-time analytics.</p>
+                        </div>
+                        <div class="flow-step mt-6">
+                            <h4 class="font-semibold text-xl text-white">4. Performance Monitoring & Iteration</h4>
+                            <p class="text-gray-300">Maintained dynamic dashboards to monitor KPIs and continuously refine the strategy for optimal results.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="valency" class="my-24 py-16 bg-blue-900/20">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <p class="font-display text-lg text-blue-400">CASE STUDY 02</p>
+                    <h2 class="font-display section-title">Valency Agro</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-gray-300">Driving revenue growth for a dry fruits seller by creating powerful visualization tools and executing data-backed sales initiatives.</p>
+                </div>
+                
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <p class="font-display text-gray-200 text-2xl">Contributed to a</p>
+                    <p class="kpi-value">10%</p>
+                    <p class="font-display text-gray-200 text-2xl">Growth in Revenue</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h3 class="font-display text-3xl text-yellow-400 mb-4">Identified Key Market Trends</h3>
+                        <p class="text-gray-300 mb-6">Market research revealed several key drivers for the dry fruits industry. This radar chart visualizes the relative importance of these trends, showing a strong demand for 'Festival Gifting' and 'Health-Conscious' product lines, which directly informed our marketing focus.</p>
+                        <div class="chart-container">
+                            <canvas id="marketTrendsChart"></canvas>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="font-display text-3xl text-yellow-400 mb-4">Regional Sales Performance</h3>
+                        <p class="text-gray-300 mb-6">Created Tableau dashboards to monitor sales KPIs. This donut chart, inspired by that work, shows a breakdown of sales by region. It highlighted underperforming areas, allowing leadership to reallocate marketing resources for improved national coverage.</p>
+                        <div class="chart-container">
+                            <canvas id="regionalSalesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center border-t border-blue-800 pt-8 mt-12">
+            <p class="font-display text-3xl text-white mb-6">Connect & Collaborate</p>
+            <div class="flex justify-center items-center space-x-8">
+                <a href="mailto:om7272.mishra@gmail.com" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300" aria-label="Email">
+                    <span class="text-4xl">&#9993;</span>
+                </a>
+                <a href="https://linkedin.com/in/om-mishra-605509250" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300" aria-label="LinkedIn">
+                    <span class="text-3xl font-bold border-2 border-gray-300 rounded-md px-2 py-0.5 hover:border-yellow-400 transition-colors duration-300">in</span>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+        };
+        
+        const chartColors = ['#25A2E0', '#F2C43D', '#FFFFFF', '#818CF8', '#C084FC'];
+
+        const salesTrendCtx = document.getElementById('salesTrendChart').getContext('2d');
+        new Chart(salesTrendCtx, {
+            type: 'line',
+            data: {
+                labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+                datasets: [{
+                    label: 'Sales Trend',
+                    data: [120, 125, 122, 185],
+                    backgroundColor: 'rgba(37, 162, 224, 0.2)',
+                    borderColor: '#25A2E0',
+                    tension: 0.4,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: 'rgba(255, 255, 255, 0.1)'}, ticks: { color: '#E5E7EB' } },
+                    x: { grid: { color: 'rgba(255, 255, 255, 0.1)'}, ticks: { color: '#E5E7EB' } }
+                }
+            }
+        });
+
+        const stockCtx = document.getElementById('stockChart').getContext('2d');
+        new Chart(stockCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Before Analysis', 'After Analysis'],
+                datasets: [
+                    { label: 'Stock Level', data: [70, 92], backgroundColor: '#25A2E0' },
+                    { label: 'Supply Gap', data: [30, 8], backgroundColor: '#F23D3D' }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                plugins: { legend: { position: 'bottom', labels: { color: '#E5E7EB' } }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+                scales: { x: { stacked: true, grid: { color: 'rgba(255, 255, 255, 0.1)'}, ticks: { color: '#E5E7EB' } }, y: { stacked: true, grid: { display: false }, ticks: { color: '#E5E7EB' } } }
+            }
+        });
+
+        const marketTrendsCtx = document.getElementById('marketTrendsChart').getContext('2d');
+        new Chart(marketTrendsCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Festival Gifting', 'Health-Conscious', 'Corporate Gifting', 'Bulk Purchasing', 'Online Retail'],
+                datasets: [{
+                    label: 'Trend Importance',
+                    data: [90, 85, 70, 75, 80],
+                    backgroundColor: 'rgba(242, 196, 61, 0.2)',
+                    borderColor: '#F2C43D',
+                    pointBackgroundColor: '#F2C43D',
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.2)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                        pointLabels: { color: '#FFFFFF', font: { size: 12 } },
+                        ticks: { display: false }
+                    }
+                }
+            }
+        });
+
+        const regionalSalesCtx = document.getElementById('regionalSalesChart').getContext('2d');
+        new Chart(regionalSalesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['North', 'West', 'South', 'East'],
+                datasets: [{
+                    label: 'Regional Sales',
+                    data: [40, 25, 20, 15],
+                    backgroundColor: chartColors,
+                    borderColor: '#0B1C3D',
+                    borderWidth: 5,
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom', labels: { color: '#E5E7EB' } }, tooltip: { callbacks: { title: tooltipTitleCallback } } },
+                cutout: '60%'
+            }
+        });
+    </script>
+</body>
+</html>
