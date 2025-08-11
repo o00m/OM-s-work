@@ -1,372 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Mishra | Business Analyst Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Om Mishra - Business Analytics Professional</title>
     <style>
-        /* Custom Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827; /* bg-gray-900 */
-            color: #d1d5db; /* text-gray-300 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
         }
-        /* Animation for elements scrolling into view */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        header {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
         }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
-        /* Pulsing arrow animation */
-        @keyframes pulse {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(8px);
-            }
+        header p {
+            font-size: 1.2rem;
         }
-        .animate-pulse-down {
-            animation: pulse 2s infinite;
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
         }
-        /* Timeline line */
-        .timeline-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #374151; /* bg-gray-700 */
-            left: 1.25rem; /* Corresponds to pl-10 */
-            top: 2.5rem; /* Adjust based on content */
-            bottom: -1rem; /* Adjust based on content */
-            transform: translateX(-50%);
+        h2 {
+            color: #1e3c72;
+            margin-top: 1.5rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .contact a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Main Container -->
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+<header>
+    <h1>Om Mishra</h1>
+    <p>Business Analytics Graduate | Market Research | Data Visualization | Financial Analysis</p>
+</header>
 
-        <!-- Section 1: Hero/Landing Page -->
-        <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center">
-            <div class="reveal w-full">
-                <!-- Cartoonish Avatar SVG -->
-                <div class="mb-6">
-                    <svg class="w-40 h-40 mx-auto rounded-full bg-gray-800 p-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="50" cy="50" r="48" fill="url(#avatarBg)"/>
-                        <path d="M50,98 C23.49,98 2,76.51 2,50 C2,23.49 23.49,2 50,2 C76.51,2 98,23.49 98,50 C98,76.51 76.51,98 50,98 Z" fill="#27272a"/>
-                        <!-- Head -->
-                        <path d="M50,28 C40,28 35,40 35,50 C35,65 40,75 50,75 C60,75 65,65 65,50 C65,40 60,28 50,28 Z" fill="#facc15"/>
-                        <path d="M50,28 C40,28 35,40 35,50 C35,65 40,75 50,75 C60,75 65,65 65,50 C65,40 60,28 50,28 Z" fill="#fde047" transform="translate(1, -1)"/>
-                        <!-- Hair -->
-                        <path d="M35,48 C30,35 40,25 50,25 C60,25 70,35 65,48 L35,48 Z" fill="#1c1917"/>
-                        <!-- Eyes -->
-                        <circle cx="43" cy="45" r="3" fill="#1c1917"/>
-                        <circle cx="57" cy="45" r="3" fill="#1c1917"/>
-                        <!-- Smile -->
-                        <path d="M45,60 Q50,65 55,60" stroke="#1c1917" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                        <!-- Shirt -->
-                        <path d="M35,74 L35,85 L65,85 L65,74 C60,78 40,78 35,74 Z" fill="#f8fafc"/>
-                        <path d="M45,74 L45,85 L55,85 L55,74 Z" fill="#1c1917"/>
-                        <path d="M45,74 L50,80 L55,74 Z" fill="#1c1917"/>
-                    </svg>
-                </div>
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a Business Analytics graduate with expertise in market research, data visualization, and financial analysis. 
+        I thrive on turning data into actionable insights that drive business growth. 
+        Skilled in Excel, Tableau, Python, and Power BI, I combine analytical thinking with strong communication skills to deliver measurable results.
+    </p>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">Om Mishra</h1>
-                <div class="mt-4 h-1 w-24 bg-blue-500 mx-auto rounded-full"></div>
-                <p class="mt-6 text-lg sm:text-xl text-gray-300">Business Analyst | Data-Driven Strategist</p>
+    <h2>Education</h2>
+    <ul>
+        <li><strong>BBA in Business Analytics</strong>, Christ University, Lavasa (2021–2024) — GPA: 3.16</li>
+        <li><strong>CBSE Class XII</strong>, Divine Sainik School, Varanasi (2021) — 67%</li>
+        <li><strong>CBSE Class X</strong>, Divine Sainik School, Varanasi (2019) — 67%</li>
+    </ul>
 
-                <!-- Social Icons -->
-                <div class="mt-8 flex justify-center space-x-6">
-                    <a href="https://linkedin.com/in/om-mishra-605509250" target="_blank" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="mailto:om7272.mishra@gmail.com" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">Email</span>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-                    </a>
-                    <a href="tel:+916386734752" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">Phone</span>
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Scroll Down Arrow -->
-            <a href="#about" class="absolute bottom-10 animate-pulse-down">
-                <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </a>
-        </section>
+    <h2>Professional Experience</h2>
+    <ul>
+        <li>
+            <strong>Marketing Executive</strong> — Oncosys Formulation Pvt Ltd (Nov 2024 – Present)  
+            Coordinated targeted campaigns, optimized stock levels, and conducted market research & competitor analysis.
+        </li>
+        <li>
+            <strong>Marketing Executive Intern</strong> — Oncosys Formulation Pvt Ltd (Jun 2024 – Nov 2024)  
+            Improved inventory forecasting and aligned promotional efforts with demand forecasts.
+        </li>
+        <li>
+            <strong>Sales & Marketing Intern</strong> — Valency Agro Pvt Ltd (Jul 2023 – Aug 2023)  
+            Built Tableau dashboards, identified market trends, and contributed to 10% revenue growth.
+        </li>
+    </ul>
 
-        <!-- Section 2: About Me & Core Competencies -->
-        <section id="about" class="py-20 sm:py-32">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-                <div class="md:col-span-3 reveal">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Driving Growth Through Data</h2>
-                    <p class="mt-6 text-lg leading-8 text-gray-300">
-                        I am a Business Analytics graduate specializing in transforming raw data into strategic assets. My expertise lies in market research, financial analysis, and creating powerful data visualizations that uncover actionable insights. I thrive on using data to solve complex problems and fuel business growth.
-                    </p>
-                </div>
-                <div class="md:col-span-2 reveal">
-                    <div class="space-y-8">
-                        <!-- Interactive Number 1 -->
-                        <div class="text-center">
-                            <p class="text-5xl font-bold text-blue-400 tracking-tighter" data-target="10">0</p>
-                            <p class="mt-2 text-base text-gray-400">Contributed to 10% revenue growth through innovative sales and marketing initiatives.</p>
-                        </div>
-                        <!-- Interactive Number 2 -->
-                        <div class="text-center">
-                            <p class="text-5xl font-bold text-blue-400 tracking-tighter" data-target="5">0</p>
-                            <p class="mt-2 text-base text-gray-400">Identified 5 key market trends to shape and refine marketing strategies.</p>
-                        </div>
-                        <!-- Interactive Number 3 -->
-                        <div class="text-center">
-                            <p class="text-5xl font-bold text-blue-400 tracking-tighter" data-target="4">0</p>
-                            <p class="mt-2 text-base text-gray-400">Proficient in 4+ key analytics tools including Python, Power BI, Excel, and Tableau.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <h2>Certifications</h2>
+    <ul>
+        <li>Machine Learning & AI using Python — Edu Edge Pro</li>
+        <li>Business Intelligence & Dashboarding with Power BI — Edu Edge Pro</li>
+    </ul>
 
-        <!-- Section 3: Professional Experience -->
-        <section id="experience" class="py-20 sm:py-32">
-            <div class="mx-auto max-w-2xl lg:mx-0 reveal">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">My Journey</h2>
-                <p class="mt-4 text-lg text-gray-400">A timeline of my professional growth and key contributions.</p>
-            </div>
-            <div class="mt-16 space-y-12">
-                <!-- Timeline Item 1 -->
-                <div class="relative pl-10 timeline-item reveal">
-                    <div class="absolute left-0 flex items-center justify-center w-10 h-10">
-                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-400">Nov 2024 - Present</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Marketing Executive</h3>
-                    <p class="text-md text-gray-300">Oncosys Formulation Pvt Ltd.</p>
-                    <ul class="mt-4 list-disc list-inside text-gray-400 space-y-2">
-                        <li>Coordinating with sales teams to execute targeted campaigns using real-time data insights.</li>
-                        <li>Conducting continuous market and competitor analysis to track sales trends and product performance.</li>
-                    </ul>
-                </div>
-                <!-- Timeline Item 2 -->
-                <div class="relative pl-10 timeline-item reveal">
-                    <div class="absolute left-0 flex items-center justify-center w-10 h-10">
-                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-400">Jun 2024 - Nov 2024</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Marketing Executive Intern</h3>
-                    <p class="text-md text-gray-300">Oncosys Formulation Pvt Ltd.</p>
-                    <ul class="mt-4 list-disc list-inside text-gray-400 space-y-2">
-                        <li>Partnered with sales and distribution to streamline inventory forecasting.</li>
-                        <li>Collaborated with cross-functional teams to align promotional efforts with market research data.</li>
-                    </ul>
-                </div>
-                <!-- Timeline Item 3 -->
-                <div class="relative pl-10 timeline-item reveal">
-                    <div class="absolute left-0 flex items-center justify-center w-10 h-10">
-                        <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
-                    </div>
-                    <p class="text-sm font-semibold text-gray-400">Jul 2023 - Aug 2023</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Sales and Marketing Intern</h3>
-                    <p class="text-md text-gray-300">Valency Agro Pvt. Ltd.</p>
-                     <ul class="mt-4 list-disc list-inside text-gray-400 space-y-2">
-                        <li>Created and maintained dynamic Tableau dashboards to monitor sales KPIs.</li>
-                        <li>Recognized for impactful contributions with a Letter of Recognition.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Industry Review Project – Pharmaceutical Sector</strong> — SWOT analysis and compliance strategy insights.</li>
+        <li><strong>Research Paper</strong> — “The Fraud Puzzle: Unifying Common Trends in Financial Statement Manipulation”</li>
+    </ul>
 
-        <!-- Section 4: Skills & Projects -->
-        <section id="skills" class="py-20 sm:py-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <!-- Skills Column -->
-                <div class="reveal">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Technical Toolkit</h2>
-                    <p class="mt-4 text-lg text-gray-400">The primary tools and technologies I use to drive analysis and insights.</p>
-                    <div class="mt-8 space-y-6">
-                        <!-- Skill Bar -->
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-base font-medium text-blue-300">Python (for ML/AI)</span>
-                                <span class="text-sm font-medium text-blue-300">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 0%" data-width="90%"></div>
-                            </div>
-                        </div>
-                        <!-- Skill Bar -->
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-base font-medium text-blue-300">Power BI</span>
-                                <span class="text-sm font-medium text-blue-300">95%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 0%" data-width="95%"></div>
-                            </div>
-                        </div>
-                         <!-- Skill Bar -->
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-base font-medium text-blue-300">Tableau</span>
-                                <span class="text-sm font-medium text-blue-300">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 0%" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <!-- Skill Bar -->
-                        <div class="skill-bar">
-                            <div class="flex justify-between mb-1">
-                                <span class="text-base font-medium text-blue-300">MS Excel</span>
-                                <span class="text-sm font-medium text-blue-300">98%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-1000" style="width: 0%" data-width="98%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Projects Column -->
-                <div class="reveal">
-                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Featured Projects</h2>
-                     <p class="mt-4 text-lg text-gray-400">Highlights of my work applying analytics to real-world challenges.</p>
-                    <div class="mt-8 space-y-8">
-                        <!-- Project Card 1 -->
-                        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                            <h3 class="text-lg font-semibold text-white">Industry Review: Pharmaceutical Sector</h3>
-                            <p class="mt-2 text-gray-400">Conducted a full SWOT analysis to deliver actionable insights on market dynamics and regulatory strategies.</p>
-                        </div>
-                        <!-- Project Card 2 -->
-                        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
-                            <h3 class="text-lg font-semibold text-white">Research: The Fraud Puzzle</h3>
-                            <p class="mt-2 text-gray-400">Utilized data analytics to identify patterns in fraudulent financial reporting and propose preventive measures.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <h2>Skills</h2>
+    <ul>
+        <li><strong>Technical:</strong> Python, Power BI, MS Excel</li>
+        <li><strong>Soft Skills:</strong> Communication, Analytical Thinking, Decision-making, Project Management</li>
+    </ul>
 
-        <!-- Section 5: Let's Connect -->
-        <footer id="contact" class="py-20 sm:py-32 text-center border-t border-gray-800">
-            <div class="reveal">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Interested in collaborating?</h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-xl mx-auto">I am always looking for new opportunities to leverage my analytical skills and drive business success. Let's get in touch.</p>
-                <!-- Social Icons -->
-                <div class="mt-10 flex justify-center space-x-6">
-                    <a href="https://linkedin.com/in/om-mishra-605509250" target="_blank" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">LinkedIn</span>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="mailto:om7272.mishra@gmail.com" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">Email</span>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-                    </a>
-                    <a href="tel:+916386734752" class="text-gray-400 hover:text-blue-500 transition duration-300">
-                        <span class="sr-only">Phone</span>
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    </a>
-                </div>
-                <p class="mt-10 text-sm text-gray-500">&copy; 2025 Om Mishra | Designed with a passion for data.</p>
-            </div>
-        </footer>
+    <h2>Achievements & Roles</h2>
+    <ul>
+        <li>1st Position in Marketing & PR Management at IGNITE’21</li>
+        <li>Coordinator (Kaliedo) — Managed interdepartmental sports & cultural fest logistics</li>
+        <li>Member, Centre for Social Action (CSA) — Organized weekly community engagement events</li>
+    </ul>
+</section>
 
-    </div>
+<footer>
+    <p class="contact">
+        Connect with me: 
+        <a href="mailto:om7272.mishra@gmail.com">Email</a> | 
+        <a href="https://linkedin.com/in/om-mishra-605509250" target="_blank">LinkedIn</a>
+    </p>
+</footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Intersection Observer for revealing elements on scroll ---
-            const revealElements = document.querySelectorAll('.reveal');
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // Optional: unobserve after revealing to save resources
-                        // observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            revealElements.forEach(el => {
-                revealObserver.observe(el);
-            });
-
-            // --- Number Counting Animation ---
-            const numberCounters = document.querySelectorAll('[data-target]');
-            const animateCounter = (el) => {
-                const target = +el.getAttribute('data-target');
-                const duration = 1500; // ms
-                const frameDuration = 1000 / 60; // 60fps
-                const totalFrames = Math.round(duration / frameDuration);
-                let frame = 0;
-
-                const counter = setInterval(() => {
-                    frame++;
-                    const progress = frame / totalFrames;
-                    const currentCount = Math.round(target * progress);
-                    el.innerText = currentCount;
-
-                    if (frame === totalFrames) {
-                        el.innerText = target; // Ensure it ends on the exact target
-                        clearInterval(counter);
-                    }
-                }, frameDuration);
-            };
-
-            const numberObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animateCounter(entry.target);
-                        observer.unobserve(entry.target); // Animate only once
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-
-            numberCounters.forEach(counter => {
-                numberObserver.observe(counter);
-            });
-            
-            // --- Skill Bar Animation ---
-            const skillBars = document.querySelectorAll('.skill-bar div[data-width]');
-            const skillObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const bar = entry.target;
-                        const targetWidth = bar.getAttribute('data-width');
-                        bar.style.width = targetWidth;
-                        observer.unobserve(bar); // Animate only once
-                    }
-                });
-            }, {
-                threshold: 0.5
-            });
-
-            skillBars.forEach(bar => {
-                skillObserver.observe(bar);
-            });
-        });
-    </script>
 </body>
 </html>
-
-
